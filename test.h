@@ -4,27 +4,30 @@
 #include<iostream>
 using namespace std; 
 
-class ContactTree{
-  private:
-  int number; 
-  string name;
+class Tree{
+    protected:
+    int number; 
+    string name; 
 
-  public:
-  ContactTree *left; 
-  ContactTree *right;
+    public:
+    Tree *left; 
+    Tree *right;
+    Tree(){
+        left=nullptr;
+         right=nullptr;
+        
+    };
 
-  void addDetails(ContactTree *& root, int number, string name);
-  void searchDetails(ContactTree *root);
-  void menu();
+    void addTree(Tree *&root, string name, int number);
+        
+    void printInorder(Tree *root);
+    
+};
 
-  ContactTree(int number,string name){
-    this->number=number;
-    this->name=name;
-    left=nullptr;
-    right=nullptr;
-  };
+class Menu:protected Tree{
+    public:
+    void menu();
 
 };
 
-#endif TEST_H 
-
+#endif 
