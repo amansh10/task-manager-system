@@ -20,7 +20,7 @@ class Task{
 
     vector<Task> task_vector;
     unordered_map<string, vector<Task> >task_hash_map;
-    //priority_queue<int, Task>task_priority_queue;
+    priority_queue<pair<int, string > >task_priority_queue;
     Task(){};
 
     Task(string name, string category, string description,string due_date, int priority){
@@ -30,8 +30,8 @@ class Task{
         this->due_date=due_date;
         this->priority=priority;
     };
+ 
 
-     
     
     void add_task();
     void delete_task();
