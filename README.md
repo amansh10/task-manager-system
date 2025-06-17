@@ -94,4 +94,4 @@ A fully functional Task Manager built using Object-Oriented Programming (OOP) pr
 
 Created with ❤️ by [Your Name]
 
-[GitHub](https://github.com/amansh10) | [LinkedIn](https://linkedin.com/in/your-profile)
+[GitHub](https://github.com/amansh10) | [LinkedIn](https://www.linkedin.com/in/aman-shrestha710/)
