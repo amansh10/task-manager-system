@@ -4,16 +4,20 @@
         string name,category,description,due_date;
         int priority;
         cout<<"What is the name of the task? "<<endl;
-        cin>>name;
+         cin.ignore();
+         getline(cin,name);
         
         cout<<"What is the category" <<endl;
         cin>>category;
 
         cout<<"Write the description? "<<endl;
-        cin>>description;
-        cout<<"What is the due date? "<<endl;
-        cin>>due_date;
+        cin.ignore(); 
+        getline(cin, description); // important, allows to get full inline text 
 
+        cout<<"What is the due date? "<<endl;
+        cin.ignore();
+        getline(cin,due_date);
+        
         cout<<"What is the priority? "<<endl;
         cin>>priority;
 
@@ -67,7 +71,7 @@
                 C.name = new_name;
             }
             else if (options == "b") {
-                C.name = "Task Completed" + C.name; // or use a proper flag instead
+                C.name = "Task Completed" + C.name; 
                 cout << "Marked as completed by modifying name.\n";
             }
             else if (options == "c") {
@@ -79,13 +83,15 @@
             else if (options == "d") {
                 string new_description;
                 cout << "Enter the new description: ";
-                cin >> new_description;
+                cin.ignore(); 
+                getline(cin, new_description);  
                 C.description = new_description;
             }
             else if (options == "e") {
                 string new_due_date;
                 cout << "Enter the new due date: ";
-                cin >> new_due_date;
+                cin.ignore();
+                getline(cin,new_due_date);
                 C.due_date = new_due_date;
             }
             else {
