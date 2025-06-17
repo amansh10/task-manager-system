@@ -17,10 +17,12 @@ class Task{
     string description; 
     string due_date; 
     int priority;
+    bool is_completed;
 
     vector<Task> task_vector;
     unordered_map<string, vector<Task> >task_hash_map;
     priority_queue<pair<int, string > >task_priority_queue;
+     priority_queue<pair<int, string> > temp_queue;
     Task(){};
 
     Task(string name, string category, string description,string due_date, int priority){
@@ -29,6 +31,7 @@ class Task{
         this->description=description;
         this->due_date=due_date;
         this->priority=priority;
+        this->is_completed=false;
     };
  
 
@@ -48,7 +51,10 @@ class Task{
 class Menu{
     public:
     int options; 
+    string sub_options; 
+
     Task T;
+
     void menu();
 };
 
